@@ -13,15 +13,8 @@ async function flipkart(title,resultArray)
     console.log("Im flippkart");
     let webs = "https://www.flipkart.com"
     let url = `https://www.flipkart.com/search?q=${title}`
-    async function fetchAsync (url) {
-        let response = await fetch(url);
-        let data = await response.text();
-        return data;
-    }
-    const response =await fetchAsync(url)
-    console.log(response)
-    
-    const $ = cheerio.load(response);
+    const {data} = await axios.get(url);
+    const $ = cheerio.load(data);
     const review_divs = $('._1YokD2  ._3LWZlK');
     const product_divs = $("._4rR01T")
     const prices_div = $("._1_WHN1")

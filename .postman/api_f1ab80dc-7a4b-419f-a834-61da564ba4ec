@@ -9,10 +9,13 @@ id = f1ab80dc-7a4b-419f-a834-61da564ba4ec
 
 [config.relations.collections]
 rootDirectory = postman/collections
+files[] = {"id":"22980142-04900844-9ed7-4546-ac13-3184e8024d76","path":"RESTful API Basics #blueprint.json","metaData":{}}
 
 [config.relations.collections.metaData]
 
 [config.relations.apiDefinition]
 rootDirectory = postman/schemas
+files[] = {"path":"index.json","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
+type = openapi:3
